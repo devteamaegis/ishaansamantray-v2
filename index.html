@@ -4,71 +4,164 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Ishaan Samantray</title>
-<meta name="description" content="Ishaan Samantray — Cornell student building software that helps people.">
+<meta name="description" content="Ishaan Samantray — building software that helps people. Cornell BME + CS.">
 <link rel="canonical" href="https://ishaansamantray.com/">
 <meta property="og:title" content="Ishaan Samantray">
-<meta property="og:description" content="Cornell student building software that helps people.">
+<meta property="og:description" content="Building software that helps people. Cornell BME + CS.">
 <meta property="og:url" content="https://ishaansamantray.com/">
 <meta property="og:image" content="https://ishaansamantray.com/assets/profile.jpg">
 <style>
   :root{
-    --bg:#faf8f4; --fg:#1b1a17; --muted:#8d887b; --line:#e5e0d5; --link:#1b1a17;
+    --bg:#ffffff; --fg:#1b1a17; --muted:#8d887b; --line:#e2ddd2; --chip:#f4f1ea; --link:#1b1a17;
   }
   @media (prefers-color-scheme: dark){
-    :root{ --bg:#100f0d; --fg:#ececea; --muted:#8f8b81; --line:#262420; --link:#ececea; }
+    :root{ --bg:#100f0d; --fg:#ececea; --muted:#8f8b81; --line:#282520; --chip:#1a1815; --link:#ececea; }
   }
   *{ box-sizing:border-box; }
   html,body{ margin:0; }
   body{
     background:var(--bg); color:var(--fg);
-    font: 17px/1.6 Georgia, "Times New Roman", serif;
+    font: 17px/1.62 Georgia, "Times New Roman", serif;
     -webkit-font-smoothing:antialiased;
     display:flex; justify-content:center;
-    padding:9vh 22px 14vh;
+    padding:8vh 22px 12vh;
   }
-  .wrap{ width:100%; max-width:540px; }
-  .photo{ width:100%; max-width:420px; margin:0 auto 42px; display:block; border-radius:10px; }
-  h1{ font-size:27px; margin:0 0 4px; font-weight:600; letter-spacing:-.01em; }
-  .loc{ color:var(--muted); margin:0 0 3px; }
-  .email{ font-family: ui-monospace, "SF Mono", Menlo, monospace; font-size:14px; margin:0; }
-  .email a{ color:var(--muted); text-decoration:none; }
-  .email a:hover{ color:var(--fg); }
-  .cols{ display:flex; gap:44px; margin-top:46px; align-items:flex-start; }
-  .lead{ margin:0; }
-  .lead .sub{ color:var(--muted); }
-  .links{ margin-top:22px; display:flex; flex-direction:column; gap:9px; }
-  .links a{ text-decoration:none; color:var(--link); width:max-content; border-bottom:1px solid var(--line); }
-  .links a:hover{ border-color:var(--fg); }
-  .quote{ color:var(--muted); font-style:italic; font-size:15px; line-height:1.75; margin:0; }
-  @media (max-width:560px){ .cols{ flex-direction:column; gap:30px; } }
+  .wrap{ width:100%; max-width:640px; }
+  a{ color:var(--link); text-underline-offset:2px; }
+  h1{ font-size:22px; font-weight:600; margin:0; display:inline; }
+  p{ margin:0 0 14px; }
+  .intro{ margin-bottom:20px; }
+  .rn{ margin:14px 0 4px; }
+  ul{ margin:0 0 0 0; padding-left:20px; }
+  ul li{ margin:5px 0; }
+  .contact{ margin-top:16px; font-size:15px; color:var(--muted); }
+  .contact a{ color:var(--muted); }
+  .contact a:hover{ color:var(--fg); }
+  .sep{ opacity:.5; padding:0 6px; }
+
+  nav.tabs{ margin:30px 0 22px; font-size:16px; }
+  nav.tabs a{ text-decoration:none; color:var(--muted); }
+  nav.tabs a.active{ color:var(--fg); font-style:italic; background:var(--chip); padding:2px 6px; border-radius:5px; }
+  nav.tabs a:hover{ color:var(--fg); }
+
+  section h2{ font-size:16px; font-weight:600; margin:0 0 12px; }
+  .tl{ list-style:none; margin:0; padding:0; }
+  .tl li{ margin:0 0 12px; padding:0; line-height:1.5; }
+  .tl a{ font-weight:600; text-decoration:none; border-bottom:1px solid var(--line); }
+  .tl a:hover{ border-color:var(--fg); }
+  .tl em{ color:var(--fg); }
+  .tl .date{ color:var(--muted); font-size:13px; }
+  .tl .d{ color:var(--fg); }
+
+  .sub{ color:var(--muted); }
+  .plist{ list-style:none; margin:0; padding:0; }
+  .plist li{ margin:0 0 11px; }
+  .plist a{ font-weight:600; text-decoration:none; border-bottom:1px solid var(--line); }
+  .plist a:hover{ border-color:var(--fg); }
+
+  .skill-row{ display:flex; gap:14px; margin:0 0 14px; align-items:baseline; }
+  .skill-label{ font-family: ui-monospace, "SF Mono", Menlo, monospace; font-size:11px; letter-spacing:.08em; color:var(--muted); min-width:104px; padding-top:3px; }
+  .chips{ display:flex; flex-wrap:wrap; gap:7px; }
+  .chip{ font-family: ui-monospace, "SF Mono", Menlo, monospace; font-size:12.5px; border:1px solid var(--line); border-radius:6px; padding:4px 9px; background:var(--chip); white-space:nowrap; }
+
+  .gallery{ column-count:3; column-gap:8px; }
+  .gallery img{ width:100%; margin:0 0 8px; border-radius:6px; display:block; }
+  @media (max-width:620px){ .gallery{ column-count:2; } .skill-row{ flex-direction:column; gap:6px; } .skill-label{ min-width:0; } }
 </style>
 </head>
 <body>
   <main class="wrap">
-    <img class="photo" src="assets/profile.jpg" alt="Ishaan Samantray">
-
-    <h1>Ishaan Samantray</h1>
-    <p class="loc">Ithaca, NY</p>
-    <p class="email"><a href="mailto:is455@cornell.edu">is455@cornell.edu</a></p>
-
-    <div class="cols">
-      <div class="left">
-        <p class="lead">
-          I build software that helps people.<br>
-          <span class="sub">Right now, mostly AI. I also like shipping fast, car photography, and skiing.</span>
-        </p>
-        <nav class="links">
-          <a href="https://usetote.dev" target="_blank" rel="noopener">Tote</a>
-          <a href="https://github.com/devteamaegis" target="_blank" rel="noopener">GitHub</a>
-          <a href="https://www.linkedin.com/in/ishaan-samantray1/" target="_blank" rel="noopener">LinkedIn</a>
-          <a href="https://x.com/IshaanSamantray" target="_blank" rel="noopener">Twitter</a>
-          <a href="assets/IshaanSamantray-Resume.pdf" target="_blank" rel="noopener">Resume</a>
-        </nav>
-      </div>
-      <div class="right">
-        <p class="quote">Life is like a roller coaster. When you are at the very bottom, the only way left to go is up.</p>
+    <div class="intro">
+      <p><h1>My name is Ishaan Samantray.</h1></p>
+      <p class="rn">Right now:</p>
+      <ul>
+        <li>I study Biomedical Engineering and Computer Science at <a href="https://www.cornell.edu" target="_blank" rel="noopener">Cornell</a>.</li>
+        <li>I am building <a href="https://usetote.dev" target="_blank" rel="noopener">Tote</a>, and I am a software engineer at <a href="https://ion.design" target="_blank" rel="noopener">Ion</a> (YC W24).</li>
+      </ul>
+      <div class="contact">
+        <a href="https://github.com/devteamaegis" target="_blank" rel="noopener">GitHub</a><span class="sep">·</span>
+        <a href="https://www.linkedin.com/in/ishaan-samantray1/" target="_blank" rel="noopener">LinkedIn</a><span class="sep">·</span>
+        <a href="https://x.com/IshaanSamantray" target="_blank" rel="noopener">Twitter</a><span class="sep">·</span>
+        <a href="https://www.instagram.com/ishaan.s06/" target="_blank" rel="noopener">Instagram</a><span class="sep">·</span>
+        <a href="mailto:is455@cornell.edu">Email</a><span class="sep">·</span>
+        <a href="assets/IshaanSamantray-Resume.pdf" download>Resume</a>
       </div>
     </div>
+
+    <nav class="tabs">
+      <a id="nav-experience" href="#experience">Experience</a><span class="sep">·</span>
+      <a id="nav-more" href="#more">More stuff</a><span class="sep">·</span>
+      <a id="nav-skills" href="#skills">Skills</a><span class="sep">·</span>
+      <a id="nav-photography" href="#photography">Photography</a>
+    </nav>
+
+    <section id="tab-experience">
+      <h2>Experience</h2>
+      <ul class="tl">
+        <li><a href="https://ion.design" target="_blank" rel="noopener">Ion</a> (YC W24) — <em>software engineer</em>. <span class="d">Built Ditto, a deterministic website cloner.</span> <span class="date">Jun 2026 – Present</span></li>
+        <li><a href="https://www.medimint.health/" target="_blank" rel="noopener">Medimint</a> — <em>business analyst &amp; software engineering intern</em>. <span class="d">Built incident-report software and an identity verification API behind an $8M Penn Medicine contract.</span> <span class="date">Dec 2025 – Present</span></li>
+        <li><a href="https://github.com/NIH-NEI/LipidUnet" target="_blank" rel="noopener">NIH, National Eye Institute</a> — <em>research intern, Bharti Lab</em>. <span class="d">Built LipidUNet, an AI model for retinal disease, and ran my own RPE cell culture.</span> <span class="date">Dec 2023 – May 2025</span></li>
+        <li><a href="https://www.astrazeneca.com/" target="_blank" rel="noopener">AstraZeneca</a> — <em>business development intern</em>. <span class="d">Shadowed research, clinical operations, and business development across the drug pipeline.</span> <span class="date">Summer 2024</span></li>
+        <li><a href="https://journals.gmu.edu/jssr/article/view/4225" target="_blank" rel="noopener">George Mason, ASSIP</a> — <em>research intern</em>. <span class="d">Designed interfering peptides for cancer immunotherapy and published the work.</span> <span class="date">Summer 2024</span></li>
+        <li><a href="https://pubmed.ncbi.nlm.nih.gov/40321780/" target="_blank" rel="noopener">Sanaria</a> — <em>research intern</em>. <span class="d">Mapped mosquito lines for the PfSPZ malaria vaccine and co-authored a peer-reviewed paper.</span> <span class="date">Aug 2023 – May 2024</span></li>
+        <li><a href="https://engineering.jhu.edu/faculty/warren-grayson/" target="_blank" rel="noopener">Johns Hopkins, Grayson Lab</a> — <em>research intern</em>. <span class="d">Designed 3D-printed implants and a surgical jig for stem-cell extraction.</span> <span class="date">Summer 2022</span></li>
+        <li><a href="https://kids4code.org/teachers" target="_blank" rel="noopener">Kids For Code</a> — <em>co-founder</em>. <span class="d">Taught over 10,000 students to code across 37 states and 11 countries.</span> <span class="date">2021 – 2025</span></li>
+      </ul>
+    </section>
+
+    <section id="tab-more" hidden>
+      <h2>More stuff</h2>
+      <ul class="plist">
+        <li><a href="https://usetote.dev" target="_blank" rel="noopener">Tote</a> <span class="sub">— making the world's commerce work for AI agents.</span></li>
+        <li><a href="https://github.com/ion-design/ditto.site" target="_blank" rel="noopener">Ditto</a> <span class="sub">— open-source deterministic website cloner. 1k+ GitHub stars, #2 on Product Hunt.</span></li>
+        <li><a href="https://veritydn.vercel.app" target="_blank" rel="noopener">Verity</a> <span class="sub">— scans public data to flag healthcare fraud, every claim cited to its source.</span></li>
+        <li><a href="https://kids4code.org/teachers" target="_blank" rel="noopener">Kids For Code</a> <span class="sub">— nonprofit that taught 10,000+ kids to code.</span></li>
+        <li><a href="https://github.com/devteamaegis" target="_blank" rel="noopener">42 merged open-source pull requests</a> <span class="sub">— across 29 orgs (LanceDB, Sentry, Cohere, Pydantic, and more).</span></li>
+      </ul>
+    </section>
+
+    <section id="tab-skills" hidden>
+      <h2>Skills</h2>
+      <div class="skill-row"><div class="skill-label">LANGUAGES</div><div class="chips"><span class="chip">Python</span><span class="chip">TypeScript</span><span class="chip">Java</span><span class="chip">C++</span><span class="chip">JavaScript</span><span class="chip">HTML5</span><span class="chip">CSS3</span></div></div>
+      <div class="skill-row"><div class="skill-label">FRAMEWORKS</div><div class="chips"><span class="chip">React</span><span class="chip">Next.js</span><span class="chip">FastAPI</span><span class="chip">Node.js</span><span class="chip">Tailwind CSS</span></div></div>
+      <div class="skill-row"><div class="skill-label">AI</div><div class="chips"><span class="chip">Claude</span><span class="chip">OpenAI</span><span class="chip">LangChain</span></div></div>
+      <div class="skill-row"><div class="skill-label">INFRA</div><div class="chips"><span class="chip">Supabase</span><span class="chip">PostgreSQL</span><span class="chip">Git</span><span class="chip">Vercel</span><span class="chip">Docker</span><span class="chip">VS Code</span><span class="chip">Postman</span></div></div>
+      <div class="skill-row"><div class="skill-label">LAB</div><div class="chips"><span class="chip">Western Blot</span><span class="chip">PCR</span><span class="chip">RPE Cell Culture</span><span class="chip">Image Segmentation</span><span class="chip">ChimeraX</span><span class="chip">ProCoDA</span><span class="chip">CAD</span></div></div>
+      <div class="skill-row"><div class="skill-label">BIZ</div><div class="chips"><span class="chip">DCF Modeling</span><span class="chip">HubSpot CRM</span><span class="chip">Excel</span><span class="chip">Financial Analysis</span></div></div>
+      <div class="skill-row"><div class="skill-label">OFF_HOURS</div><div class="chips"><span class="chip">tennis</span><span class="chip">skiing</span><span class="chip">boxing</span><span class="chip">restaurants</span><span class="chip">urban exploring</span><span class="chip">spanish</span><span class="chip">car photography</span><span class="chip">building with raspberry pi</span></div></div>
+    </section>
+
+    <section id="tab-photography" hidden>
+      <h2>Photography</h2>
+      <p class="sub" style="margin-bottom:16px">Cars, mostly. Shot by me.</p>
+      <div class="gallery" id="gallery"></div>
+    </section>
   </main>
+
+  <script src="cars-data.js"></script>
+  <script>
+    var tabs = ['experience','more','skills','photography'];
+    function show(id){
+      if(tabs.indexOf(id) < 0) id = 'experience';
+      tabs.forEach(function(t){
+        document.getElementById('tab-'+t).hidden = (t !== id);
+        document.getElementById('nav-'+t).classList.toggle('active', t === id);
+      });
+      if(id === 'photography') renderGallery();
+    }
+    var galleryDone = false;
+    function renderGallery(){
+      if(galleryDone || !window.CARS) return;
+      galleryDone = true;
+      var g = document.getElementById('gallery');
+      window.CARS.forEach(function(c){
+        var img = document.createElement('img');
+        img.src = c.src; img.loading = 'lazy'; img.alt = c.caption || 'car photo';
+        g.appendChild(img);
+      });
+    }
+    window.addEventListener('hashchange', function(){ show(location.hash.slice(1)); });
+    show(location.hash.slice(1) || 'experience');
+  </script>
 </body>
 </html>
