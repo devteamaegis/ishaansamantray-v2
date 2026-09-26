@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ishaan Samantray</title>
+<meta name="description" content="Ishaan Samantray — Cornell student building software that helps people.">
+<link rel="canonical" href="https://ishaansamantray.com/">
+<meta property="og:title" content="Ishaan Samantray">
+<meta property="og:description" content="Cornell student building software that helps people.">
+<meta property="og:url" content="https://ishaansamantray.com/">
+<meta property="og:image" content="https://ishaansamantray.com/assets/profile.jpg">
+<style>
+  :root{
+    --bg:#faf8f4; --fg:#1b1a17; --muted:#8d887b; --line:#e5e0d5; --link:#1b1a17;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{ --bg:#100f0d; --fg:#ececea; --muted:#8f8b81; --line:#262420; --link:#ececea; }
+  }
+  *{ box-sizing:border-box; }
+  html,body{ margin:0; }
+  body{
+    background:var(--bg); color:var(--fg);
+    font: 17px/1.6 Georgia, "Times New Roman", serif;
+    -webkit-font-smoothing:antialiased;
+    display:flex; justify-content:center;
+    padding:9vh 22px 14vh;
+  }
+  .wrap{ width:100%; max-width:540px; }
+  .photo{ width:100%; max-width:420px; margin:0 auto 42px; display:block; border-radius:10px; }
+  h1{ font-size:27px; margin:0 0 4px; font-weight:600; letter-spacing:-.01em; }
+  .loc{ color:var(--muted); margin:0 0 3px; }
+  .email{ font-family: ui-monospace, "SF Mono", Menlo, monospace; font-size:14px; margin:0; }
+  .email a{ color:var(--muted); text-decoration:none; }
+  .email a:hover{ color:var(--fg); }
+  .cols{ display:flex; gap:44px; margin-top:46px; align-items:flex-start; }
+  .lead{ margin:0; }
+  .lead .sub{ color:var(--muted); }
+  .links{ margin-top:22px; display:flex; flex-direction:column; gap:9px; }
+  .links a{ text-decoration:none; color:var(--link); width:max-content; border-bottom:1px solid var(--line); }
+  .links a:hover{ border-color:var(--fg); }
+  .quote{ color:var(--muted); font-style:italic; font-size:15px; line-height:1.75; margin:0; }
+  @media (max-width:560px){ .cols{ flex-direction:column; gap:30px; } }
+</style>
+</head>
+<body>
+  <main class="wrap">
+    <img class="photo" src="assets/profile.jpg" alt="Ishaan Samantray">
+
+    <h1>Ishaan Samantray</h1>
+    <p class="loc">Ithaca, NY</p>
+    <p class="email"><a href="mailto:is455@cornell.edu">is455@cornell.edu</a></p>
+
+    <div class="cols">
+      <div class="left">
+        <p class="lead">
+          I build software that helps people.<br>
+          <span class="sub">Right now, mostly AI. I also like shipping fast, car photography, and skiing.</span>
+        </p>
+        <nav class="links">
+          <a href="https://usetote.dev" target="_blank" rel="noopener">Tote</a>
+          <a href="https://github.com/devteamaegis" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://www.linkedin.com/in/ishaan-samantray1/" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://x.com/IshaanSamantray" target="_blank" rel="noopener">Twitter</a>
+          <a href="assets/IshaanSamantray-Resume.pdf" target="_blank" rel="noopener">Resume</a>
+        </nav>
+      </div>
+      <div class="right">
+        <p class="quote">Life is like a roller coaster. When you are at the very bottom, the only way left to go is up.</p>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
