@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Ishaan Samantray</title>
-<meta name="description" content="Ishaan Samantray — building software that helps people. Cornell BME + CS.">
+<meta name="description" content="Ishaan Samantray - building software that helps people. Cornell BME + CS.">
 <link rel="canonical" href="https://ishaansamantray.com/">
 <meta property="og:title" content="Ishaan Samantray">
 <meta property="og:description" content="Building software that helps people. Cornell BME + CS.">
@@ -12,7 +12,7 @@
 <meta property="og:image" content="https://ishaansamantray.com/assets/profile.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Orbitron:wght@600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Jacquard+24&family=Orbitron:wght@600;700&family=Space+Mono:wght@400;700&family=VT323&display=swap" rel="stylesheet">
 <style>
   html[data-theme="light"]{ --bg:#f7f3ea; --fg:#23201b; --muted:#8f897a; --line:#e4ddcd; --chip:#efe9dc; --link:#23201b; }
   html[data-theme="dark"] { --bg:#15120d; --fg:#ece6da; --muted:#8f8778; --line:#2a2419; --chip:#1f1a12; --link:#e8c98a; }
@@ -30,18 +30,16 @@
   .wrap{ width:100%; max-width:640px; }
   a{ color:var(--link); text-underline-offset:2px; }
 
-  /* top-left dot motif */
-  #motif{ position:fixed; top:20px; left:18px; width:158px; height:66px; z-index:5; }
-  /* light/dark toggle */
-  #toggle{ position:fixed; top:16px; right:18px; z-index:6; cursor:pointer; width:34px; height:34px;
+  /* top-right dot motif */
+  #motif{ position:fixed; top:20px; right:18px; left:auto; width:158px; height:66px; z-index:5; }
+  /* light/dark toggle (top-left) */
+  #toggle{ position:fixed; top:16px; left:18px; right:auto; z-index:6; cursor:pointer; width:34px; height:34px;
     border:1px solid var(--line); border-radius:8px; background:var(--chip); color:var(--fg);
     font-size:15px; line-height:1; display:flex; align-items:center; justify-content:center; }
 
-  .avatar{ width:150px; border-radius:11px; display:block; margin:0 0 22px; }
-  h1{ font-size:25px; font-weight:600; margin:0; display:inline; }
-  /* per-character gothic hover on the name */
-  .name span{ display:inline-block; transition:color .1s; }
-  .name span:hover{ font-family:'Orbitron', sans-serif; font-weight:600; }
+  .avatar{ width:150px; border-radius:11px; display:block; margin:0 auto 22px; }
+  /* sticky multi-font hover: each character keeps whatever font it was last hovered into */
+  .fx{ cursor:default; }
 
   p{ margin:0 0 14px; }
   .intro{ margin-bottom:20px; }
@@ -67,11 +65,13 @@
   .tl .date{ color:var(--muted); font-size:14px; }
   .tl .d{ color:var(--fg); }
 
+  .mh{ font-family: ui-monospace, "SF Mono", Menlo, monospace; font-size:11px; letter-spacing:.08em; color:var(--muted); text-transform:uppercase; margin:22px 0 10px; }
   .sub{ color:var(--muted); }
   .plist{ list-style:none; margin:0; padding:0; }
   .plist li{ margin:0 0 11px; }
   .plist a{ font-weight:600; text-decoration:none; border-bottom:1px solid var(--line); }
   .plist a:hover{ border-color:var(--fg); }
+  .plist .date{ color:var(--muted); font-size:14px; }
 
   .skill-row{ display:flex; gap:14px; margin:0 0 14px; align-items:baseline; }
   .skill-label{ font-family: ui-monospace, "SF Mono", Menlo, monospace; font-size:11px; letter-spacing:.08em; color:var(--muted); min-width:104px; padding-top:4px; }
@@ -90,7 +90,7 @@
   <main class="wrap">
     <img class="avatar" src="assets/profile.jpg" alt="Ishaan Samantray">
     <div class="intro">
-      <p>My name is <span class="name" data-text="Ishaan Samantray"></span>.</p>
+      <p>My name is Ishaan Samantray.</p>
       <p class="rn">Right now:</p>
       <ul>
         <li>I study Biomedical Engineering and Computer Science at <a href="https://www.cornell.edu" target="_blank" rel="noopener">Cornell</a>.</li>
@@ -116,25 +116,44 @@
     <section id="tab-experience">
       <h2>Experience</h2>
       <ul class="tl">
-        <li><a href="https://ion.design" target="_blank" rel="noopener">Ion</a> (YC W24) — <em>software engineer</em>. <span class="d">Built Ditto, a deterministic website cloner.</span> <span class="date">Jun 2026 – Present</span></li>
-        <li><a href="https://www.medimint.health/" target="_blank" rel="noopener">Medimint</a> — <em>business analyst &amp; software engineering intern</em>. <span class="d">Built incident-report software and an identity verification API behind an $8M Penn Medicine contract.</span> <span class="date">Dec 2025 – Present</span></li>
-        <li><a href="https://github.com/NIH-NEI/LipidUnet" target="_blank" rel="noopener">NIH, National Eye Institute</a> — <em>research intern, Bharti Lab</em>. <span class="d">Built LipidUNet, an AI model for retinal disease, and ran my own RPE cell culture.</span> <span class="date">Dec 2023 – May 2025</span></li>
-        <li><a href="https://www.astrazeneca.com/" target="_blank" rel="noopener">AstraZeneca</a> — <em>business development intern</em>. <span class="d">Shadowed research, clinical operations, and business development across the drug pipeline.</span> <span class="date">Summer 2024</span></li>
-        <li><a href="https://journals.gmu.edu/jssr/article/view/4225" target="_blank" rel="noopener">George Mason, ASSIP</a> — <em>research intern</em>. <span class="d">Designed interfering peptides for cancer immunotherapy and published the work.</span> <span class="date">Summer 2024</span></li>
-        <li><a href="https://pubmed.ncbi.nlm.nih.gov/40321780/" target="_blank" rel="noopener">Sanaria</a> — <em>research intern</em>. <span class="d">Mapped mosquito lines for the PfSPZ malaria vaccine and co-authored a peer-reviewed paper.</span> <span class="date">Aug 2023 – May 2024</span></li>
-        <li><a href="https://engineering.jhu.edu/faculty/warren-grayson/" target="_blank" rel="noopener">Johns Hopkins, Grayson Lab</a> — <em>research intern</em>. <span class="d">Designed 3D-printed implants and a surgical jig for stem-cell extraction.</span> <span class="date">Summer 2022</span></li>
-        <li><a href="https://kids4code.org/teachers" target="_blank" rel="noopener">Kids For Code</a> — <em>co-founder</em>. <span class="d">Taught over 10,000 students to code across 37 states and 11 countries.</span> <span class="date">2021 – 2025</span></li>
+        <li><a href="https://ion.design" target="_blank" rel="noopener">Ion</a> (YC W24) - <em>software engineer</em>. <span class="d">Built Ditto, a deterministic website cloner.</span> <span class="date">Jun 2026 - Present</span></li>
+        <li><a href="https://www.vaxonspace.com" target="_blank" rel="noopener">Vaxon Space</a> - <em>software engineer</em>. <span class="d">Built the company's web platform, including an interactive 3D globe of their VLEO satellite constellation.</span> <span class="date">2026 - Present</span></li>
+        <li><a href="https://github.com/NIH-NEI/LipidUnet" target="_blank" rel="noopener">NIH, National Eye Institute</a> - <em>research intern, Bharti Lab</em>. <span class="d">Built LipidUNet, an AI model for retinal disease, and ran my own RPE cell culture.</span> <span class="date">Dec 2023 - May 2025</span></li>
+        <li><a href="https://www.astrazeneca.com/" target="_blank" rel="noopener">AstraZeneca</a> - <em>business development intern</em>. <span class="d">Shadowed research, clinical operations, and business development across the drug pipeline.</span> <span class="date">Summer 2024</span></li>
+        <li><a href="https://journals.gmu.edu/jssr/article/view/4225" target="_blank" rel="noopener">George Mason, ASSIP</a> - <em>research intern</em>. <span class="d">Designed interfering peptides for cancer immunotherapy and published the work.</span> <span class="date">Summer 2024</span></li>
+        <li><a href="https://pubmed.ncbi.nlm.nih.gov/40321780/" target="_blank" rel="noopener">Sanaria</a> - <em>research intern</em>. <span class="d">Mapped mosquito lines for the PfSPZ malaria vaccine and co-authored a peer-reviewed paper.</span> <span class="date">Aug 2023 - May 2024</span></li>
+        <li><a href="https://engineering.jhu.edu/faculty/warren-grayson/" target="_blank" rel="noopener">Johns Hopkins, Grayson Lab</a> - <em>research intern</em>. <span class="d">Designed 3D-printed implants and a surgical jig for stem-cell extraction.</span> <span class="date">Summer 2022</span></li>
+        <li><a href="https://kids4code.org/teachers" target="_blank" rel="noopener">Kids For Code</a> - <em>co-founder</em>. <span class="d">Taught over 10,000 students to code across 37 states and 11 countries.</span> <span class="date">2021 - 2025</span></li>
       </ul>
     </section>
 
     <section id="tab-more" hidden>
       <h2>More stuff</h2>
       <ul class="plist">
-        <li><a href="https://usetote.dev" target="_blank" rel="noopener">Tote</a> <span class="sub">— making the world's commerce work for AI agents.</span></li>
-        <li><a href="https://github.com/ion-design/ditto.site" target="_blank" rel="noopener">Ditto</a> <span class="sub">— open-source deterministic website cloner. 1k+ GitHub stars, #2 on Product Hunt.</span></li>
-        <li><a href="https://veritydn.vercel.app" target="_blank" rel="noopener">Verity</a> <span class="sub">— scans public data to flag healthcare fraud, every claim cited to its source.</span></li>
-        <li><a href="https://kids4code.org/teachers" target="_blank" rel="noopener">Kids For Code</a> <span class="sub">— nonprofit that taught 10,000+ kids to code.</span></li>
-        <li><a href="https://github.com/devteamaegis" target="_blank" rel="noopener">42 merged open-source pull requests</a> <span class="sub">— across 29 orgs (LanceDB, Sentry, Cohere, Pydantic, and more).</span></li>
+        <li><a href="https://usetote.dev" target="_blank" rel="noopener">Tote</a> <span class="sub">- making the world's commerce work for AI agents.</span></li>
+        <li><a href="https://github.com/ion-design/ditto.site" target="_blank" rel="noopener">Ditto</a> <span class="sub">- open-source deterministic website cloner. 1k+ GitHub stars, #2 on Product Hunt.</span></li>
+        <li><a href="https://kids4code.org/teachers" target="_blank" rel="noopener">Kids For Code</a> <span class="sub">- nonprofit that taught 10,000+ kids to code.</span></li>
+        <li><a href="https://github.com/devteamaegis" target="_blank" rel="noopener">42 merged open-source pull requests</a> <span class="sub">- across 29 orgs (LanceDB, Sentry, Cohere, Pydantic, and more).</span></li>
+      </ul>
+
+      <div class="mh">Hackathons</div>
+      <ul class="plist">
+        <li><a href="https://veritydn.vercel.app" target="_blank" rel="noopener">Verity</a> <span class="sub">- pre-payment healthcare-fraud tripwire built only from public federal data. Found $55.9M paid to providers after they were barred. DNHacks 2026.</span></li>
+        <li><a href="https://threat-vector.vercel.app" target="_blank" rel="noopener">Kairos</a> <span class="sub">- live AI command center for anonymous school-threat reporting, triages each tip in 8.2 seconds. YC Call My Agent hackathon.</span></li>
+        <li><a href="https://github.com/devteamaegis/ara-copilot" target="_blank" rel="noopener">Ara Co-Pilot</a> <span class="sub">- macOS earpiece for live calls, transcribes on-device and answers from your calendar and email. Ara.so x DayDreamers hackathon.</span></li>
+      </ul>
+
+      <div class="mh">Awards</div>
+      <ul class="plist">
+        <li><strong>1st Place Biology, Montgomery Science Fair</strong> <span class="sub">- AstraZeneca Exceptional Award for malaria vaccine work at Sanaria.</span> <span class="date">2024</span></li>
+        <li><a href="https://www.futureengineers.org/battelleclimatechallenge/gallery/61285" target="_blank" rel="noopener">Battelle Climate Change Finalist</a> <span class="sub">- Nitrogen Storm Drain, winner of a $1,500 grant.</span> <span class="date">2023</span></li>
+        <li><strong>Science Olympiad Regionals</strong> <span class="sub">- placed 1st, 3rd, and 6th across events, qualified for State.</span> <span class="date">2023</span></li>
+        <li><strong>JSHS Regional Qualifier</strong> <span class="sub">- Junior Science and Humanities Symposium, ALS extension and microneedle patch.</span> <span class="date">2023</span></li>
+        <li><strong>MIT THINK Participant</strong> <span class="sub">- optimization and classification framework for remote explosive detection on high-dimensional, imbalanced data.</span> <span class="date">2022, 2023</span></li>
+        <li><strong>Montgomery Science Fair Sweep</strong> <span class="sub">- ASM Materials Award, NOAA Award, US Stockholm Junior Water Prize, EPA Encouragement Award.</span> <span class="date">2022</span></li>
+        <li><strong>eCYBERMISSION State Winner</strong> <span class="sub">- led a three-person team on drug repurposing for wet AMD, $1,000 bond.</span> <span class="date">2021</span></li>
+        <li><strong>Explorovision Participant Award</strong> <span class="sub">- ALS research on astrocyte phenotype conversion in the CNS.</span> <span class="date">2021, 2022</span></li>
+        <li><a href="https://bethesdamagazine.com/2020/05/26/school-notes-mcps-lgbtq-forum-on-wednesday/" target="_blank" rel="noopener">United We Learn Contest</a> <span class="sub">- MCPS school-notes recognition for contest placement.</span> <span class="date">2020</span></li>
       </ul>
     </section>
 
@@ -164,11 +183,38 @@
     (function(){ var s; try{ s = localStorage.getItem('theme'); }catch(e){} applyTheme(s || 'light'); })();
     tbtn.addEventListener('click', function(){ applyTheme(root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark'); });
 
-    // ---- per-character tech (Orbitron) hover on the name ----
-    document.querySelectorAll('[data-text]').forEach(function(el){
-      el.innerHTML = el.dataset.text.split('').map(function(ch){ return ch === ' ' ? '<span>&nbsp;</span>' : '<span>'+ch+'</span>'; }).join('');
-    });
-    if(document.fonts && document.fonts.load){ document.fonts.load("600 1em Orbitron"); } // warm the hover font
+    // ---- sticky multi-font hover: every character cycles through display fonts on re-hover and keeps it ----
+    var FX_FONTS = ["'Orbitron', sans-serif", "'Jacquard 24', serif", "'Space Mono', monospace", "'VT323', monospace"];
+    (function(){
+      var main = document.querySelector('main');
+      var walker = document.createTreeWalker(main, NodeFilter.SHOW_TEXT, null);
+      var nodes = [], n;
+      while(n = walker.nextNode()){
+        if(!n.nodeValue.trim()) continue;
+        var pn = n.parentNode.nodeName;
+        if(pn === 'SCRIPT' || pn === 'STYLE') continue;
+        nodes.push(n);
+      }
+      nodes.forEach(function(node){
+        var frag = document.createDocumentFragment();
+        node.nodeValue.split('').forEach(function(ch){
+          if(ch === ' ' || ch === '\n' || ch === '\t'){ frag.appendChild(document.createTextNode(ch)); return; }
+          var s = document.createElement('span'); s.className = 'fx'; s.textContent = ch; frag.appendChild(s);
+        });
+        node.parentNode.replaceChild(frag, node);
+      });
+      main.addEventListener('mouseover', function(e){
+        var t = e.target;
+        if(t && t.classList && t.classList.contains('fx')){
+          var i = (t._fx || 0) + 1; t._fx = i;
+          var idx = i % (FX_FONTS.length + 1);
+          t.style.fontFamily = idx === 0 ? '' : FX_FONTS[idx - 1];
+        }
+      });
+      if(document.fonts && document.fonts.load){
+        ["600 1em Orbitron", "1em 'Jacquard 24'", "1em 'Space Mono'", "1em VT323"].forEach(function(f){ try{ document.fonts.load(f); }catch(e){} });
+      }
+    })();
 
     // ---- corner dot motif: dotted Porsche 911 side profile ----
     (function(){
@@ -200,7 +246,7 @@
             var jx = Math.sin(t*0.001+p.ph)*0.5, jy = Math.cos(t*0.0013+p.ph)*0.5;
             p.vx = p.vx*0.86 + ((p.tx+jx)-p.x)*0.05; p.vy = p.vy*0.86 + ((p.ty+jy)-p.y)*0.05;
             var mdx = p.x-mouse.x, mdy = p.y-mouse.y, d2 = mdx*mdx+mdy*mdy;
-            if(d2 < 2600){ var d = Math.sqrt(d2)||1, f = (51-d)/51*3; p.vx += mdx/d*f; p.vy += mdy/d*f; }
+            if(d2 < 1200){ var d = Math.sqrt(d2)||1, f = (34-d)/34*2.6; p.vx += mdx/d*f; p.vy += mdy/d*f; }
             p.x += p.vx; p.y += p.vy;
           }
           ctx.beginPath(); ctx.arc(p.x, p.y, 1.0, 0, 6.29); ctx.fill();
